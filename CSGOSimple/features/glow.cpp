@@ -55,11 +55,11 @@ void Glow::Run()
         if(!entity || entity->IsDormant())
             continue;
 
-        auto class_id = entity->GetClientClass()->m_ClassID;
+        auto class_info = entity->GetClientClass()->m_ClassInfo;
         auto color = Color{};
 
-        switch(class_id) {
-            case ClassId_CCSPlayer:
+        switch(class_info) {
+            case CCSPlayer:
             {
                 auto is_enemy = entity->m_iTeamNum() != g_LocalPlayer->m_iTeamNum();
 
@@ -78,18 +78,18 @@ void Glow::Run()
 
                 break;
             }
-            case ClassId_CChicken:
+            case CChicken:
                 if(!g_Options.glow_chickens)
                     continue;
                 entity->m_bShouldGlow() = true;
                 color = g_Options.color_glow_chickens;
                 break;
-            case ClassId_CBaseAnimating:
+            case CBaseAnimating:
                 if(!g_Options.glow_defuse_kits)
                     continue;
                 color = g_Options.color_glow_defuse;
                 break;
-            case ClassId_CPlantedC4:
+            case CPlantedC4:
                 if(!g_Options.glow_planted_c4)
                     continue;
                 color = g_Options.color_glow_planted_c4;
