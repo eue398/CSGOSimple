@@ -16,5 +16,5 @@ public:
     char*                    m_pNetworkName;
     RecvTable*               m_pRecvTable;
     ClientClass*             m_pNext;
-    ClassId                  m_ClassID;
+    ClassInfo                  m_ClassInfo;
 };
