@@ -1,5 +1,21 @@
 #pragma once
 
+enum CSWeaponType
+{
+    WEAPONTYPE_KNIFE = 0,
+    WEAPONTYPE_PISTOL,
+    WEAPONTYPE_SUBMACHINEGUN,
+    WEAPONTYPE_RIFLE,
+    WEAPONTYPE_SHOTGUN,
+    WEAPONTYPE_SNIPER_RIFLE,
+    WEAPONTYPE_MACHINEGUN,
+    WEAPONTYPE_C4,
+    WEAPONTYPE_PLACEHOLDER,
+    WEAPONTYPE_GRENADE,
+    WEAPONTYPE_UNKNOWN,
+    MAXCSWEAPONTYPE
+};
+
 enum ECstrike15UserMessages {
     CS_UM_VGUIMenu = 1,
     CS_UM_Geiger = 2,
@@ -65,7 +81,7 @@ enum ECstrike15UserMessages {
     CS_UM_QuestProgress = 66,
     CS_UM_ScoreLeaderboardData = 67,
     CS_UM_PlayerDecalDigitalSignature = 68,
-    MAX_ECSTRIKE15USERMESSAGES
+    MAXECSTRIKE15USERMESSAGES
 };
 
 
@@ -132,7 +148,7 @@ enum ItemDefinitionIndex {
     GLOVE_LEATHER_WRAP = 5032,
     GLOVE_MOTORCYCLE = 5033,
     GLOVE_SPECIALIST = 5034,
-    MAX_ITEMDEFINITIONINDEX
+    MAXITEMDEFINITIONINDEX
 };
 
 enum ClassInfo {
@@ -475,7 +491,7 @@ enum ECSPlayerBones {
     VALVEBIPED_WEAPON_BONE,
     LH_IK_DRIVER,
     PRIMARY_JIGGLE_JNT,
-    MAX_ECSPLAYERBONES
+    MAXECSPLAYERBONES
 };
 
 enum EntityFlags {
@@ -495,7 +511,7 @@ enum LifeState : unsigned char {
     LIFE_ALIVE = 0,// alive
     LIFE_DYING = 1, // playing death animation or still falling off of a ledge waiting to hit ground
     LIFE_DEAD = 2, // dead. lying still.
-    MAX_LIFESTATE
+    MAXLIFESTATE
 };
 
 enum WeaponSound_t {
@@ -518,7 +534,7 @@ enum WeaponSound_t {
     // Add new shoot sound types here
     REVERSE_THE_NEW_SOUND,
     NUM_SHOOT_SOUND_TYPES,
-    MAX_WEAPONSOUND
+    MAXWEAPONSOUND
 };
 
 enum MoveType_t {
@@ -536,5 +552,5 @@ enum MoveType_t {
     MOVETYPE_CUSTOM,
     MOVETYPE_LAST = MOVETYPE_CUSTOM,
     MOVETYPE_MAX_BITS = 4,
-    MAX_MOVETYPE
+    MAXMOVETYPE
 };
