@@ -34,8 +34,7 @@ enum Hitboxes {
     MAXHITBOXES
 };
 
-enum CSWeaponType
-{
+enum CSWeaponType {
     WEAPONTYPE_KNIFE = 0,
     WEAPONTYPE_PISTOL,
     WEAPONTYPE_SUBMACHINEGUN,
