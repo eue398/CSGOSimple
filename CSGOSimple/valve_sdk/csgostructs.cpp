@@ -20,12 +20,12 @@ bool C_BaseEntity::IsWeapon()
 
 bool C_BaseEntity::IsPlantedC4()
 {
-    return GetClientClass()->m_ClassID == ClassId_CPlantedC4;
+    return GetClientClass()->m_ClassInfo == CPlantedC4;
 }
 
 bool C_BaseEntity::IsDefuseKit()
 {
-    return GetClientClass()->m_ClassID == ClassId_CBaseAnimating;
+    return GetClientClass()->m_ClassInfo == CBaseAnimating;
 }
 
 CCSWeaponInfo* C_BaseCombatWeapon::GetCSWeaponData()
