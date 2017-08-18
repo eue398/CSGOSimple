@@ -1,6 +1,7 @@
 #pragma once
 
 #include "sdk.hpp"
+#include "misc\Enums.hpp"
 
 #define NETVAR(type, name, table, netvar)                           \
     type& name##() const {                                          \
@@ -13,21 +14,6 @@
         static int _##name = NetvarSys::Get().GetOffset(table, netvar);     \
         return (type*)((uintptr_t)this + _##name);                 \
     }
-
-enum CSWeaponType
-{
-    WEAPONTYPE_KNIFE = 0,
-    WEAPONTYPE_PISTOL,
-    WEAPONTYPE_SUBMACHINEGUN,
-    WEAPONTYPE_RIFLE,
-    WEAPONTYPE_SHOTGUN,
-    WEAPONTYPE_SNIPER_RIFLE,
-    WEAPONTYPE_MACHINEGUN,
-    WEAPONTYPE_C4,
-    WEAPONTYPE_PLACEHOLDER,
-    WEAPONTYPE_GRENADE,
-    WEAPONTYPE_UNKNOWN
-};
 
 class C_BaseEntity;
 
