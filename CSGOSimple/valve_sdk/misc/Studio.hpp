@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Math/Vector.hpp"
+#include "Enums.hpp"
 
 typedef float Quaternion[4];
 typedef float RadianEuler[3];
@@ -41,40 +42,6 @@ typedef float RadianEuler[3];
 #define BONE_HAS_SAVEFRAME_POS          0x00200000    // Vector48
 #define BONE_HAS_SAVEFRAME_ROT64        0x00400000    // Quaternion64
 #define BONE_HAS_SAVEFRAME_ROT32        0x00800000    // Quaternion32
-
-
-enum modtype_t
-{
-    mod_bad = 0,
-    mod_brush,
-    mod_sprite,
-    mod_studio
-};
-
-enum Hitboxes
-{
-    HITBOX_HEAD,
-    HITBOX_NECK,
-    HITBOX_LOWER_NECK,
-    HITBOX_PELVIS,
-    HITBOX_STOMACH,
-    HITBOX_LOWER_CHEST,
-    HITBOX_CHEST,
-    HITBOX_UPPER_CHEST,
-    HITBOX_RIGHT_THIGH,
-    HITBOX_LEFT_THIGH,
-    HITBOX_RIGHT_CALF,
-    HITBOX_LEFT_CALF,
-    HITBOX_RIGHT_FOOT,
-    HITBOX_LEFT_FOOT,
-    HITBOX_RIGHT_HAND,
-    HITBOX_LEFT_HAND,
-    HITBOX_RIGHT_UPPER_ARM,
-    HITBOX_RIGHT_FOREARM,
-    HITBOX_LEFT_UPPER_ARM,
-    HITBOX_LEFT_FOREARM,
-    HITBOX_MAX
-};
 
 typedef unsigned short MDLHandle_t;
 
