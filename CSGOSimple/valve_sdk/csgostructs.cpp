@@ -183,7 +183,7 @@ Vector C_BasePlayer::GetHitboxPos(int hitbox_id)
 
 bool C_BasePlayer::GetHitboxPos(int hitbox, Vector &output)
 {
-    if(hitbox >= HITBOX_MAX)
+    if(hitbox >= MAXHITBOXES)
         return false;
 
     const model_t *model = this->GetModel();
