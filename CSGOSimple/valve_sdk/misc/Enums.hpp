@@ -5,7 +5,7 @@ enum modtype_t {
     mod_brush,
     mod_sprite,
     mod_studio,
-	MAXMODTYPE
+    MAXMODTYPE
 };
 
 enum Hitboxes {
@@ -13,8 +13,8 @@ enum Hitboxes {
     HITBOX_NECK,
     HITBOX_LOWER_NECK,
     HITBOX_PELVIS,
-	HITBOX_BODY,
-	HITBOX_THORAX,
+    HITBOX_BODY,
+    HITBOX_THORAX,
     HITBOX_STOMACH,
     HITBOX_LOWER_CHEST,
     HITBOX_CHEST,
